@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f1a0b" />
+  <title>Football Card Duel</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="icon-192.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Card Duel" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="./assets/index--IRnU0Rp.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C8hEYLcH.css">
+</head>
+<body>
+  <div id="app">
+    <header id="hud">
+      <div class="team you"><span class="badge">YOU</span><b id="s0">0</b></div>
+      <div class="clock"><b id="clock">3:00</b><span id="phase">normal</span></div>
+      <div class="team opp"><b id="s1">0</b><span class="badge">CPU</span></div>
+      <div id="opp-cd"><i></i><span id="opp-cd-text"></span></div>
+    </header>
+    <div id="stage"><canvas id="cv"></canvas><div id="tip" hidden></div>
+      <div id="shot-bar" hidden>
+        <button data-side="0"><span class="ico">◀</span><b>LEFT</b></button>
+        <button data-side="1"><span class="ico">▲</span><b>MIDDLE</b></button>
+        <button data-side="2"><span class="ico">▶</span><b>RIGHT</b></button>
+      </div>
+    </div>
+    <p id="msg"></p>
+    <div id="dock">
+      <div id="energy"><div id="energy-num">5</div><div id="energy-segs"></div></div>
+      <div id="hand"></div>
+    </div>
+    <div id="tools">
+      <button id="btn-pause">Pause</button>
+      <button id="btn-restart">Restart</button>
+      <button id="btn-settings">Settings</button>
+      <button id="btn-sound">Sound: on</button>
+      <button id="btn-team" hidden>Placing: Blue</button>
+    </div>
+  </div>
+  <div id="ghost" hidden></div>
+
+  <div id="settings" hidden>
+    <div class="panel">
+      <div class="panel-head"><b>Settings</b><button id="btn-close">Close</button></div>
+      <div id="settings-body"></div>
+      <div class="panel-foot"><button id="btn-defaults">Reset to defaults</button><span id="version"></span></div>
+    </div>
+  </div>
+
+  <div id="end" hidden>
+    <div class="panel center">
+      <h2 id="end-title"></h2>
+      <p id="end-score"></p>
+      <table id="end-stats"></table>
+      <div class="row-buttons"><button id="btn-again" class="big">Play again</button><button id="btn-menu">Menu</button></div>
+    </div>
+  </div>
+
+  <div id="menu">
+    <div class="menu-inner">
+      <img src="icon-192.png" class="menu-logo" alt="" />
+      <h1>FOOTBALL<span>CARD DUEL</span></h1>
+      <p class="tagline">Drop players. Win the ball. Score.</p>
+      <button id="btn-play" class="big">Play</button>
+      <button id="btn-how">How to play</button>
+      <span id="menu-version"></span>
+    </div>
+  </div>
+
+  <div id="how" hidden>
+    <div class="panel">
+      <div class="panel-head"><b>How to play</b><button id="btn-how-close">Got it</button></div>
+      <ol class="how-list">
+        <li><b>Drag a card</b> onto the pitch. The closest player runs to the ball and carries it straight at goal.</li>
+        <li><b>Two players per side.</b> A third card replaces your player who doesn't have the ball.</li>
+        <li><b>Pass:</b> when you have the ball, tap your other player. Passes can be caught on the way.</li>
+        <li><b>Defend from the front.</b> A player standing in front of the runner wins the ball. Players behind can't catch it.</li>
+        <li><b>Shoot!</b> Near goal the game pauses: tap where to shoot. When they shoot, tap where your keeper dives.</li>
+        <li><b>Cards:</b> Sprinter is fast but can't tackle. Defender tackles wide. Passes to the Playmaker can't be intercepted.</li>
+      </ol>
+    </div>
+  </div>
+
+</body>
+</html>

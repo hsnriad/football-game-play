@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f1a0b" />
+  <title>Football Card Duel</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="icon-192.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Card Duel" />
+  <style>html,body{margin:0;height:100%;background:#0b1408}</style>
+</head>
+<body>
+<!-- build: assets/index--IRnU0Rp.js -->
+<script>
+  fetch('app.html?t=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw 0; return r.text(); })
+    .then(function (html) { document.open(); document.write(html); document.close(); })
+    .catch(function () { location.href = 'app.html'; });
+</script>
+</body>
+</html>
